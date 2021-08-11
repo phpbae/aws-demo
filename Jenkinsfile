@@ -4,6 +4,7 @@ pipeline {
     stage('build') {
       steps {
         echo 'start build..'
+        sh 'chmod +x gradlew'
         sh './gradlew clean build'
       }
     }
